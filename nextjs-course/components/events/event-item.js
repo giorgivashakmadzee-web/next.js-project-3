@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from 'next/image';
 import classes from './event-item.module.css';
 
 
@@ -14,7 +15,9 @@ function EventItem( props){
     const exploreLink = `/events/${id}`;
 
 return <li className={classes.item}>
-    <img src={`/${image}`} alt={title} />
+    <div className={classes.image}>
+        <Image src={`/${image}`} alt={title} fill sizes="(max-width: 767px) 100vw, 40vw" />
+    </div>
     <div>
         <div>
             <h2>{title}</h2>

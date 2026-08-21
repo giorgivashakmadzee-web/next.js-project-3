@@ -17,13 +17,14 @@
 .image {
   width: 10rem;
   height: 10rem;
-  position: relative;
   border-radius: 50%;
   overflow: hidden;
   border: 5px solid white;
 }
 
 .image img {
+  width: 10rem;
+  height: 10rem;
   object-fit: cover;
 }
 
@@ -50,6 +51,11 @@
   }
 
   .image {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .image img {
     width: 20rem;
     height: 20rem;
   }

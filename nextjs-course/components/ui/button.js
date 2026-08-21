@@ -1,0 +1,16 @@
+import Link from "next/link";
+
+import classes from "./button.module.css";
+
+function Button(props) {
+        if (props.link) {
+        return(
+          <Link href={props.href} className={classes.btn}>
+                        {props.children}
+        </Link>
+    );
+  }
+    return <button type={props.type || 'submit'} onClick={props.onClick} className={classes.btn}>{props.children}</button>
+}
+
+export default Button;
